@@ -1,3 +1,4 @@
+// Top Type
 let anyVar: any = 'linbudu';
 
 anyVar = false;
@@ -8,6 +9,7 @@ anyVar = {
 
 anyVar = () => {};
 
+// Bottom Type
 const val1: string = anyVar;
 const val2: number = anyVar;
 const val3: () => {} = anyVar;

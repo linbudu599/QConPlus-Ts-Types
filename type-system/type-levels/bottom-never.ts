@@ -1,3 +1,6 @@
+// void null
+// 有效的类型值 void null undefined - string {}
+// 什么都没有！
 function justThrow(): never {
   throw new Error();
 }

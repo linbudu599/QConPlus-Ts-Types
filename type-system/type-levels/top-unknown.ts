@@ -16,6 +16,6 @@ const val4: {} = unknownVar; // Error
 const val5: any = unknownVar;
 const val6: unknown = unknownVar;
 
-(unknownVar as { foo: () => {} }).foo();
+(unknownVar as { foo: () => {} }).foo().bar;
 
 export {};

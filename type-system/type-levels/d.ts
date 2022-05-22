@@ -3,6 +3,7 @@ type Result1 = string extends String ? 1 : 2; // 1
 
 // 结构化类型
 type Result2 = String extends {} ? 1 : 2; // 1
+// object
 type Result3 = {} extends object ? 1 : 2; // 1
 
 // 类型世界的基本规则

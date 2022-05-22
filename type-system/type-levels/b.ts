@@ -1,5 +1,7 @@
+// 字面量类型 - 包含字面量类型的联合类型 - 原始类型
 // 联合类型
-type Result1 = 1 extends 1 | 2 | 3 ? 1 : 2; // 1
+// 子集！
+type Result1 = 1 | 2 extends 1 | 2 | 3 ? 1 : 2; // 1
 type Result2 = 'lin' extends 'lin' | 'bu' | 'du' ? 1 : 2; // 1
 type Result3 = true extends true | false ? 1 : 2; // 1
 type Result4 = string extends string | false | number ? 1 : 2; // 1

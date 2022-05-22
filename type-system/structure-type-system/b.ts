@@ -1,14 +1,13 @@
-class Cat {
-  eat() {}
+type USD = number;
+type CNY = number;
+
+const CNYCount: CNY = 200;
+const USDCount: USD = 200;
+
+function addCNY(source: CNY, input: CNY) {
+  return source + input;
 }
 
-class Dog {
-  eat() {}
-  bark() {}
-}
-
-function feedCat(cat: Cat) {}
-
-feedCat(new Dog());
+addCNY(CNYCount, USDCount);
 
 export {};

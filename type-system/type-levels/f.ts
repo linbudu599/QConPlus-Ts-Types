@@ -1,3 +1,5 @@
+// Bottom Type
+// 字面量类型 < 原始类型
 type Result1 = never extends 'linbudu' ? 1 : 2; // 1
 
 type Result2 = undefined extends 'linbudu' ? 1 : 2; // 2
