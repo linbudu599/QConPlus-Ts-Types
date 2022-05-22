@@ -3,7 +3,7 @@ let unknownVar: unknown = 'linbudu';
 unknownVar = false;
 unknownVar = 'linbudu';
 unknownVar = {
-  site: 'juejin',
+  site: 'qconplus',
 };
 
 unknownVar = () => {};

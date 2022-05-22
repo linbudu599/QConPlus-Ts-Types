@@ -1,19 +1,14 @@
 class Cat {
-  eat(): boolean {
-    return true;
-  }
+  eat() {}
 }
 
 class Dog {
-  eat(): number {
-    return 599;
-  }
+  eat() {}
+  bark() {}
 }
 
 function feedCat(cat: Cat) {}
 
-// 报错！
-// @ts-expect-error
 feedCat(new Dog());
 
 export {};

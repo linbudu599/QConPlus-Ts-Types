@@ -3,7 +3,7 @@ let anyVar: any = 'linbudu';
 anyVar = false;
 anyVar = 'linbudu';
 anyVar = {
-  site: 'juejin',
+  site: 'qconplus',
 };
 
 anyVar = () => {};
