@@ -1,4 +1,4 @@
-type TypeChain = never extends 'linbudu'
+type TypeLevelChain = never extends 'linbudu'
   ? 'linbudu' extends 'linbudu' | '599'
     ? 'linbudu' | '599' extends string
       ? string extends String

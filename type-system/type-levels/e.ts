@@ -1,17 +1,18 @@
-type Result22 = Object extends any ? 1 : 2; // 1
-type Result23 = Object extends unknown ? 1 : 2; // 1
+// Top Type
+type Result1 = Object extends any ? 1 : 2; // 1
+type Result2 = Object extends unknown ? 1 : 2; // 1
 
-type Result24 = any extends Object ? 1 : 2; // 1 | 2
-type Result25 = unknown extends Object ? 1 : 2; // 2
+type Result3 = any extends Object ? 1 : 2; // 1 | 2
+type Result4 = unknown extends Object ? 1 : 2; // 2
 
-type Result26 = any extends 'linbudu' ? 1 : 2; // 1 | 2
-type Result27 = any extends string ? 1 : 2; // 1 | 2
-type Result28 = any extends {} ? 1 : 2; // 1 | 2
-type Result29 = any extends never ? 1 : 2; // 1 | 2
+type Result5 = any extends 'linbudu' ? 1 : 2; // 1 | 2
+type Result6 = any extends string ? 1 : 2; // 1 | 2
+type Result7 = any extends {} ? 1 : 2; // 1 | 2
+type Result8 = any extends never ? 1 : 2; // 1 | 2
 
-type Result30 = "I'm string!" | {} extends string ? 1 : 2; // 2
+type Result9 = "I'm string!" | {} extends string ? 1 : 2; // 2
 
-type Result31 = any extends unknown ? 1 : 2; // 1
-type Result32 = unknown extends any ? 1 : 2; // 1
+type Result10 = any extends unknown ? 1 : 2; // 1
+type Result11 = unknown extends any ? 1 : 2; // 1
 
 export {};
