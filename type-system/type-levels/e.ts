@@ -1,9 +1,9 @@
-// Top Type 类型层级的最顶端！
+// Top Type 世界基本定理 类型层级的最顶端！
 type Result1 = Object extends any ? 1 : 2; // 1
 type Result2 = Object extends unknown ? 1 : 2; // 1
 
-// unknown 2
-// {} 1
+// 身化万千
+// {} | unknown > {} extends Object + unknown extends Object
 type Result3 = any extends Object ? 1 : 2; // 1 | 2
 type Result4 = unknown extends Object ? 1 : 2; // 2
 

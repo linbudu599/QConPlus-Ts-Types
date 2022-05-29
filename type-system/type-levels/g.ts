@@ -16,4 +16,7 @@ type TypeLevelChain = never extends 'linbudu'
     : 1
   : 0;
 
+// 结构化类型系统 万物起源 {}
+//
+
 export {};

@@ -6,10 +6,8 @@ class Dog {
   eat() {}
 }
 
-// Nominal Type System
-// 名义类型系统
+// 标称类型系统，名义类型系统
 
-// 参数 & 返回值 的协变、逆变检查，
 function feedCat(cat: Cat) {}
 
 feedCat(new Dog());
@@ -17,6 +15,9 @@ feedCat(new Dog());
 interface Foo {
   prop: any;
 }
+
+// 如何判断一只鸟是鸭子？
+// 走路、游泳、捕食
 
 interface Bar {
   prop: any;
@@ -34,6 +35,7 @@ declare let baz: Baz;
 foo = bar;
 bar = foo;
 
+// a = b -> b < a
 foo = baz;
 bar = baz;
 

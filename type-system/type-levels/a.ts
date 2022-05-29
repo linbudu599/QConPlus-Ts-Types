@@ -1,4 +1,5 @@
 // 字面量类型 - 对应的原始类型
+// 数字、字符串、布尔值、对象字面量类型 -> 对应的原始类型
 const name: 'linbudu' = 'linbudu';
 type Result1 = 'linbudu' extends string ? 1 : 2; // 1
 type Result2 = 1 extends number ? 1 : 2; // 1
