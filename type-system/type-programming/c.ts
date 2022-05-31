@@ -3,7 +3,7 @@
  */
 
 interface Struct {
-  foo: string;
+  foo: string | number;
   bar: number;
   baz: boolean;
   handler: () => {};
@@ -15,10 +15,11 @@ type Conditional<Value, Condition, Resolved, Rejected> = Value extends Condition
   ? Resolved
   : Rejected;
 
+// 开关
 export type ValueTypeFilter<
   T extends object,
   ValueType,
-  Positive extends boolean
+  Positive extends boolean = true
 > = {
   [Key in keyof T]-?: T[Key] extends ValueType
     ? Conditional<Positive, true, Key, never>
@@ -27,7 +28,7 @@ export type ValueTypeFilter<
 
 export type PickByValueType<T extends PlainObjectType, ValueType> = Pick<
   T,
-  ValueTypeFilter<T, ValueType, true>
+  ValueTypeFilter<T, ValueType>
 >;
 
 export type OmitByValueType<T extends PlainObjectType, ValueType> = Pick<
@@ -49,5 +50,10 @@ type Res2 = PickByValueType<Struct, Function>;
  * }
  */
 type Res3 = OmitByValueType<Struct, string>;
+
+// 分布式条件类型导致的非预期情况
+// (1|2)[] extends (1|2|3)[]
+// (1|2) (1|2)
+// Equal
 
 export {};

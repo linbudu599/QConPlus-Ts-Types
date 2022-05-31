@@ -34,6 +34,7 @@ export type StrictOmitByValueType<T extends PlainObjectType, ValueType> = Pick<
   StrictValueTypeFilter<T, ValueType, false>
 >;
 
+// {bar:1|2}
 expectType<
   StrictPickByValueType<{ foo: 1; bar: 1 | 2; baz: 1 | 2 | 3 }, 1 | 2>
 >({
@@ -46,3 +47,6 @@ expectType<
   foo: 1,
   baz: 3,
 });
+
+// 完成了内置工具类型的进阶实现
+// 高阶工具类型，Type Challenges
