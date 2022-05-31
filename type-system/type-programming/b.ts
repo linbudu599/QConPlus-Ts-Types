@@ -1,27 +1,23 @@
-export type PlainObjectType = Record<string, any>;
+/**
+ * 实现基于值类型的 PickByValueType
+ */
+interface Struct {
+  foo: string;
+  bar: number;
+  baz: boolean;
+  handler: () => {};
+}
 
-type Conditional<Value, Condition, Resolved, Rejected> = Value extends Condition
-  ? Resolved
-  : Rejected;
+type PickByValueType<T, ValueType> = T;
 
-export type ValueTypeFilter<
-  T extends object,
-  ValueType,
-  Positive extends boolean
-> = {
-  [Key in keyof T]-?: T[Key] extends ValueType
-    ? Conditional<Positive, true, Key, never>
-    : Conditional<Positive, true, never, Key>;
+// { foo: string }
+type Res1 = PickByValueType<Struct, string>;
+
+// { handler: () => {} }
+type Res2 = PickByValueType<Struct, Function>;
+
+type PickKeysByValueType<T, ValueType> = {
+  [Key in keyof T]-?: T[Key] extends ValueType ? Key : never;
 }[keyof T];
 
-export type PickByValue<T extends PlainObjectType, ValueType> = ValueTypeFilter<
-  T,
-  ValueType,
-  true
->;
-
-export type OmitByValue<T extends PlainObjectType, ValueType> = ValueTypeFilter<
-  T,
-  ValueType,
-  false
->;
+export {};
